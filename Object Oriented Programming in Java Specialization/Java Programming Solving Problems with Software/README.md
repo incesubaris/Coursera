@@ -13,3 +13,10 @@ After completing this course you will be able to:
 6. Develop a set of test cases as part of developing a program;
 7. Create a class with multiple methods that work together to solve a problem; and
 8. Use divide-and-conquer design techniques for a program that uses multiple methods.
+
+### This course is part of multiple programs
+
+This course can be applied to multiple Specializations or Professional Certificates programs. Completing this course will count towards your learning in any of the following programs:
+
+ - Object Oriented Programming in Java Specialization
+ - Java Programming and Software Engineering Fundamentals Specialization
