@@ -11,14 +11,18 @@ import edu.duke.*;
 import org.apache.commons.csv.*; 
 
 public class ParsingExportData {
-    public void tester(){
+    public static void tester(){
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
         
         //listExportersTwoProducts(parser, "cotton", "flowers" );
         //System.out.println(numberOfExporters(parser, "cocoa"));
-        bigExporters(parser, "$999,999,999,999");
+        //bigExporters(parser, "$999,999,999,999");
         //countryInfo(parser, "Nauru");
+    }
+
+    public static void main(String[] args) {
+        tester();
     }
     
     public void countryInfo(CSVParser parser, String country){
