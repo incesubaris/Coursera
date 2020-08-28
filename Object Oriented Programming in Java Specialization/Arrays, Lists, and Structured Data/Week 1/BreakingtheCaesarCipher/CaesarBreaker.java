@@ -88,23 +88,25 @@ public class CaesarBreaker {
 
         int part1index = 0;
         int part2index = 0;
+
+        CaesarCipher cc = new CaesarCipher();
+        String part1encrypted = cc.encrypt(part1, 26 - key1);
+        String part2encrypted = cc.encrypt(part2, 26 - key2);
+
         for (int i = 0; i < encrypted.length(); i++) {
             if (i % 2 == 0) {
-                char currChar = part1.charAt(part1index);
+                char currChar = part1encrypted.charAt(part1index);
                 sb.append(currChar);
                 part1index++;
             }
             if (i % 2 == 1) {
-                char currChar = part2.charAt(part2index);
+                char currChar = part2encrypted.charAt(part2index);
                 sb.append(currChar);
                 part2index++;
             }
         }
 
-        CaesarCipher cc = new CaesarCipher();
-        String unlocked = cc.encryptTwoKeys(sb.toString(), 26 - key1, 26 - key2);
-
-        return unlocked;
+        return sb.toString();
 
         /*
          * for (int i = 0; i < encrypted.length(); i++) {
@@ -120,19 +122,19 @@ public class CaesarBreaker {
 
     public static void main(String[] args) {
 
-        // CaesarCipher cc = new CaesarCipher();
-        // String message = "Just a test string with lots of eeeeeeeeeeeeeeeees";
+        CaesarCipher cc = new CaesarCipher();
+        String message = "Just a test string with lots of eeeeeeeeeeeeeeeees";
         // String message = "just a test string with lots of eeeeeeeeeeeeeeeees";
 
         // System.out.println(message);
 
-        // String locked = cc.encrypt(message, 24);
-        // System.out.println(locked);
+        String locked = cc.encryptTwoKeys(message, 24, 13);
+        System.out.println(locked);
         // decrypt(locked);
 
         // System.out.println(halfOfString("Qbkm Zgis", 0));
         // System.out.println(halfOfString("Qbkm Zgis", 1));
 
-        System.out.println(decryptTwoKeys("Cgwr Esne"));
+        System.out.println(decryptTwoKeys("Hhqg n gcfr qgpvlt jggf jbrf bd crcrcrcrcrcrcrcrcf"));
     }
 }
