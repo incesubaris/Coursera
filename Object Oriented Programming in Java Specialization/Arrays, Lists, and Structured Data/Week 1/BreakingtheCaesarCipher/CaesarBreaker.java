@@ -86,6 +86,8 @@ public class CaesarBreaker {
         int key1 = getKey(part1);
         int key2 = getKey(part2);
 
+        System.out.println(key1 + " " + key2);
+
         int part1index = 0;
         int part2index = 0;
 
@@ -128,13 +130,20 @@ public class CaesarBreaker {
 
         // System.out.println(message);
 
-        String locked = cc.encryptTwoKeys(message, 24, 13);
+        String locked = cc.encryptTwoKeys(message, 3, 19);
         System.out.println(locked);
         // decrypt(locked);
 
         // System.out.println(halfOfString("Qbkm Zgis", 0));
-        // System.out.println(halfOfString("Qbkm Zgis", 1));
+        // System.out.println(halfOfString("Qbkm Zgis", 1)); // Eren and Emily have evil
+        // eerie green ears
 
-        System.out.println(decryptTwoKeys("Hhqg n gcfr qgpvlt jggf jbrf bd crcrcrcrcrcrcrcrcf"));
+        System.out.println(decryptTwoKeys(locked));
+
+        FileResource fr = new FileResource();
+        String locked2 = fr.asString();
+
+        System.out.println(decryptTwoKeys(locked2));
+
     }
 }

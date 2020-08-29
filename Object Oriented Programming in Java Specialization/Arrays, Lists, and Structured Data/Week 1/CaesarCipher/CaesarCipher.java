@@ -64,6 +64,7 @@ public class CaesarCipher {
         // System.out.println("key is " + 23 + "\n" + encrypted);
         System.out.println(encrypt(message, 23)); // Cfopq Ibdflk
         // System.out.println(encrypt("First Legion", 23)); // Cfopq Ibdflk
+        System.out.println(encryptTwoKeys("Top ncmy qkff vi vguv vbg ycpx", 2, 20));
 
     }
 }
